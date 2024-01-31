@@ -1,0 +1,542 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flash-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #4411ce;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #4411ce;
+}
+
+button:hover, form .flash-enviar input:hover {
+    box-shadow: 0px 0px 8px #4411ce;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+    padding: 10px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .interface img {
+    margin-top: 27px;
+}
+
+/* ESTILO DO MENU MOBILE */
+.flash-abrir-menu i {
+    color: #4411ce;
+    font-size: 40px;
+}
+
+.flash-abrir-menu{
+    display: none;
+}
+
+.menu-mobile {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .flash-fechar {
+    padding: 20px 5%;
+    
+}
+ 
+.menu-mobile .flash-fechar i {
+    color: #4411ce;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #4411ce;
+}
+
+.overlay-menu {
+    background-color: #000000a7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+
+/* ESTILO DO TOPO DO SITE */
+section .topo-do-site {
+    padding:40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+}
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #4411ce;
+    font-size: 42px;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 10px 0px;
+    margin-bottom: 30px;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DOS SERVIÇOS */
+section.servicos {
+    padding: 48px 4%;
+}
+
+section.servicos .flex {
+    gap: 60px;
+}
+
+.servicos .servicos-box {
+    color: #fff;
+    margin-top: 45px;
+    border-radius: 25px;
+    padding: 48px;
+    transition: .2s;
+}
+
+.servicos .servicos-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff78;
+}
+
+.servicos .servicos-box i {
+    font-size: 70px;
+    color: #4411ce;
+}
+
+.servicos .interface h2 {
+    margin-top: 22px;
+}
+
+.servicos servicos-box h2 {
+    font-size: 50px;
+    margin: 15px 0px;
+}
+
+.servicos .servicos-box p {
+    padding-top: 15px;
+}
+/* ESTILO DO SOBRE */
+section.sobre {
+    padding: 40px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre {
+    padding: 100px 4%;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #4411ce;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0px;
+}
+
+.flash-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4411ce;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    color: white;
+}
+
+/* ESTILO DOS TRABALHOS */
+section.trabalhos {
+    padding: 80px 4%;
+}
+
+section.trabalhos .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: #4411ce;
+    background-size: cover;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+}
+
+.overlay:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+/* ESTILO DO FORMULARIO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;    
+}
+
+form input::placeholder {
+    color: #fff;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form textarea::placeholder {
+    color: #fff;
+}
+
+form .flash-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .flash-enviar input {
+    width: 120px;
+    background-color: #4411ce;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ESTILO DO RODAPÉ */
+footer {
+    padding: 40px 4%;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 2px solid #4411ce;
+}
+
+footer .line-footer p i {
+    color: #4411ce;
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .flash-social button {
+    margin-top: 40px;
+    color: white;
+}
+
+footer .line-footer .flex .txt-footer {
+    color: #fff;
+    margin-top: 40px;
+}
+
+footer .line-footer .flex .txt-footer span {
+    color: #4411ce;
+}
+
+@media screen and (max-width: 1020px){
+    /* CLASSES GERAIS */
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex {
+        flex-direction: column-reverse;
+    }
+    
+    /* CABEÇALHO */
+    .menu-desktop, .flash-contato {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    /* TOPO DO SITE */
+    .topo-do-site h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: -20px;
+        margin-top: 170px;
+    }
+
+    .topo-do-site p {
+        padding: 30px;
+    }
+
+    /* SERVIÇOS */
+    section.servicos {
+        padding: 48px 8%;
+    }
+
+    .servicos-box {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .servicos-box i {
+        display: block;
+        margin: 0 auto;
+        font-size: 2em; 
+      }
+
+    .servicos .servicos-box p {
+        display: none;
+    }
+
+    .servicos .servicos-box h2 {
+        text-align: center;
+    }
+
+    /* SOBRE */
+    .sobre .txt-sobre .p2 {
+        display: none;
+    }
+
+    .sobre .txt-sobre h2, p {
+        text-align: center;
+    }
+
+    .flash-social {
+        text-align: center;
+    }
+
+    /* TRABALHOS */
+    section.trabalhos {
+        padding: 80px 1%;
+    }
+
+    section.trabalhos .flex {
+        gap: 60px;
+    }
+
+    /* FORMULARIO */
+    section.formulario {
+        margin-top: -60px;
+    }
+
+    /* RODAPÉ */
+    footer .flash-social button {
+        display: none;
+    }
+
+    .footer .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      
+      .logo-footer {
+        flex: 1;
+        text-align: center; 
+      }
+
+      .txt-footer h1 {
+        text-align: center;
+      }
+
+      /* MENU MOBILE */
+      .flash-abrir-menu{
+        display: block;
+        position: fixed;
+        top: 20px; 
+        right: 0;
+        padding: 0 10px;
+        z-index: 9999;
+        cursor: pointer;
+      }   
+}
